@@ -6,7 +6,7 @@
 Using all the tools offered with azure ML so far the objective for this project is create, deploy and consume an auto machine learning classification project for the data banking dataset
 
 ## Architectural Diagram
-![azureml flowchart](/images/azureml_flowchart.png)
+![azureml flowchart](images/azureml_flowchart.png)
 
 Using automated ML to explore best model and hyperparameters: Instead of permuting different model options with their respective selection of hyper parameters we let an automated machine learning service to do the heavy lifting for us. This process uses successfull techniques used in order to explore the different models and hyperparameter space to select the best performing combination according to one given metric to optimize.
 
