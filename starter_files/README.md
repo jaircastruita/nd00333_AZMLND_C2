@@ -26,55 +26,55 @@ In this section it is listed the steps followed in order to finish this project.
 
 The first step is to upload the banking dataset which we are going to use to fit our model:
 
-![azureml flowchart](/images/proyecto2/04_registered_dataset.PNG)
+![azureml flowchart](images/proyecto2/04_registered_dataset.PNG)
 
 Next, employing an automl instance from azureML we are going to let it find the best model/hyperparameter combination that best works optimizing the selected classification metric (AUC weighted):
 
-![azureml flowchart](/images/proyecto2_2/s2_best_model.PNG)
+![azureml flowchart](images/proyecto2_2/s2_best_model.PNG)
 
 The process is going to take some while but once it's done you'll be left with a completed automl project with several different models and preprocessing techniques. We select the best performing model to deploy and use its predictions for future queries:
 
-![azureml flowchart](/images/proyecto2_2/s2_experiment_completed.PNG)
+![azureml flowchart](images/proyecto2_2/s2_experiment_completed.PNG)
 
 When you deploy a fitted model in a real environment it's possible that your model stumbles with some anomaly that you didn't forsee. In that case it is wise to prepare a series of pre-built modules offered by azureML to log any exception, error or just registered metrics that your deployment outputs:
 
-![azureml flowchart](/images/proyecto2_2/s3_application_insights_enabled.PNG)
+![azureml flowchart](images/proyecto2_2/s3_application_insights_enabled.PNG)
 
 The following screenshot is an example obtained by this tool:
 
-![azureml flowchart](/images/proyecto2_2/s3_logs_run.PNG)
+![azureml flowchart](images/proyecto2_2/s3_logs_run.PNG)
 
 Another thing that is neccessary when wonking on a project formed by more colleages is a intuitive way to interact with the deploy model for tests or just for compare with another probably better model. Fot that kind of scenarios we can use swagger to automatically generate the expected inputs and format that our model expects them:
 
-![azureml flowchart](/images/proyecto2_2/s5_swagger_interact.PNG)
+![azureml flowchart](images/proyecto2_2/s5_swagger_interact.PNG)
 
 Once the model is deployed we can opt for create it with some authorization credentials, this way, we can have more control over who's going to use this service. It is also useful when we are calling another 3rd application to work with the azure ML framework. The following image shows a POST request made by a python script using the provided score URI and authentification key:
 
-![azureml flowchart](/images/proyecto2_2/s6_endppoint_run.PNG)
+![azureml flowchart](images/proyecto2_2/s6_endppoint_run.PNG)
 
 Sometimes we also want to measure the time required to our system to respond to certain amount of queries. For this purpose azure CLI has a benchmark command (ab) to run some payload n times and return some basic statistics about the time it took to respond them:
 
-![azureml flowchart](/images/proyecto2_2/s6_apache_benchmark.PNG)
+![azureml flowchart](images/proyecto2_2/s6_apache_benchmark.PNG)
 
 Pipelines are useful parts for a CD/CI paradigm. They can be  sticked together to form a more complex and parallel workflow in a team project. They can also be retrained or re-run whenever certain amount of time is given or some changes to the scripts or databases are detected:
 
-![azureml flowchart](/images/proyecto2/13_pipeline_created.PNG)
+![azureml flowchart](images/proyecto2/13_pipeline_created.PNG)
 
 Entire pipelines can be deployed in matter of minutes wraping a lot of overhead for the machine learning/data science teams, leaving more time for experimentations:
 
-![azureml flowchart](/images/proyecto2/14_pipeline_endpoint.PNG)
+![azureml flowchart](images/proyecto2/14_pipeline_endpoint.PNG)
 
 The following image depicts the diagram in azure ML of the dataset given to the autoML module along with the published pipeline overview showing such pipeline active and ready to receive request:
 
-![azureml flowchart](/images/proyecto2/15_bankmarketing_automl.PNG)
+![azureml flowchart](images/proyecto2/15_bankmarketing_automl.PNG)
 
 This experiment can also be done using de SDK:
 
-![azureml flowchart](/images/proyecto2/17_rundetails.PNG)
+![azureml flowchart](images/proyecto2/17_rundetails.PNG)
 
 So at last of this project we end up with a scheduled pipeline with a model trained on the bankmarketing dataset, ready to classify any new observations that we give to it using the requested JSON payload:
 
-![azureml flowchart](/images/proyecto2/18_scheduled_run.PNG)
+![azureml flowchart](images/proyecto2/18_scheduled_run.PNG)
 
 ## Screen Recording
 [Screencast to project](https://youtu.be/IrqmbhqXVtE)
