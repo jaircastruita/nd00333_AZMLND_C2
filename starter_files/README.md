@@ -1,14 +1,11 @@
-*NOTE:* This file is a template that you can use to create the README for your project. The *TODO* comments below will highlight the information you should be sure to include.
-
-
 # Creating, deploying, consuming and pipelining an automl model from azureML
 
-Using all the tools offered with azure ML so far the objective for this project is create, deploy and consume an auto machine learning classification project for the data banking dataset
+Using all the tools offered with azure ML so far the objective for this project is create, deploy and consume an auto machine learning classification project for the data banking dataset.
 
 ## Architectural Diagram
 ![azureml flowchart](images/azureml_flowchart.png)
 
-Using automated ML to explore best model and hyperparameters: Instead of permuting different model options with their respective selection of hyper parameters we let an automated machine learning service to do the heavy lifting for us. This process uses successfull techniques used in order to explore the different models and hyperparameter space to select the best performing combination according to one given metric to optimize.
+Using automated ML to explore best model and hyperparameters: Instead of permuting different model options with their respective hyperparameters we let the automated machine learning service to do the heavy lifting for us. This process uses successful techniques used in order to explore the different models and hyperparameter space to select the best performing combination according to one given metric to optimize.
 
 Deploying the best performing model found as a service: Once the best model is found sometimes is not enough. The main reason to do such exploration is to to use its predictions as a service. To achieve this we deploy the best performing model creating an endpoint. From there the model can be accessed through an API RESTful service (Asuming that user has the required credentials to call such service).
 
@@ -19,8 +16,7 @@ Creating swagger documentation: Using the built-in swagger documentation tool he
 Creating a pipeline from a deployed model: ML pipelines stitches together different phases of ML. And it's mainly used to monitor performance in the real world, logging metrics and models outputs and also helps for detecting data drift and give the opportunity to reuse computed modules if changes weren't done.
 
 
-## Key Steps
-*TODO*: Write a short discription of the key steps. Remeber to include all the screenshots required to demonstrate key steps. 
+## Key Steps 
 
 In this section it is listed the steps followed in order to finish this project. There is a screenshot attached to each required step (Some screenshots were taken in two different sessions so there might be some difference in instances naming).
 
@@ -28,7 +24,7 @@ The first step is to upload the banking dataset which we are going to use to fit
 
 ![azureml flowchart](images/proyecto2/04_registered_dataset.PNG)
 
-Next, employing an automl instance from azureML we are going to let it find the best model/hyperparameter combination that best works optimizing the selected classification metric (AUC weighted):
+Next, employing an automl instance from azureML we are going to let it find the best model/hyperparameter combination that best works optimizing the selected classification metric (Accuracy):
 
 ![azureml flowchart](images/proyecto2_2/s2_best_model.PNG)
 
@@ -44,7 +40,7 @@ The following screenshot is an example obtained by this tool:
 
 ![azureml flowchart](images/proyecto2_2/s3_logs_run.PNG)
 
-Another thing that is neccessary when wonking on a project formed by more colleages is a intuitive way to interact with the deploy model for tests or just for compare with another probably better model. Fot that kind of scenarios we can use swagger to automatically generate the expected inputs and format that our model expects them:
+Another thing that is neccessary when working on a project formed by more colleagues is a intuitive way to interact with the deployed model for tests or just for compare with another probably better model. Fot that kind of scenarios we can use swagger to automatically generate the expected inputs and format that our model expects them:
 
 ![azureml flowchart](images/proyecto2_2/s5_swagger_interact.PNG)
 
@@ -52,7 +48,7 @@ Once the model is deployed we can opt for create it with some authorization cred
 
 ![azureml flowchart](images/proyecto2_2/s6_endppoint_run.PNG)
 
-Sometimes we also want to measure the time required to our system to respond to certain amount of queries. For this purpose azure CLI has a benchmark command (ab) to run some payload n times and return some basic statistics about the time it took to respond them:
+Sometimes we also want to measure the time required in our system to respond to certain amount of queries. For this purpose azure CLI has a benchmark command (ab) to run some payload n times and return some basic statistics about the time it took to respond them:
 
 ![azureml flowchart](images/proyecto2_2/s6_apache_benchmark.PNG)
 
@@ -68,7 +64,7 @@ The following image depicts the diagram in azure ML of the dataset given to the 
 
 ![azureml flowchart](images/proyecto2/15_bankmarketing_automl.PNG)
 
-This experiment can also be done using de SDK:
+This experiment can also be done using the SDK:
 
 ![azureml flowchart](images/proyecto2/17_rundetails.PNG)
 
@@ -77,7 +73,7 @@ So at last of this project we end up with a scheduled pipeline with a model trai
 ![azureml flowchart](images/proyecto2/18_scheduled_run.PNG)
 
 ## Screen Recording
-[Screencast to project](https://youtu.be/IrqmbhqXVtE)
+[Project screencast](https://youtu.be/IrqmbhqXVtE)
 
 ## Standout Suggestions
 *TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
