@@ -76,4 +76,5 @@ So at last of this project we end up with a scheduled pipeline with a model trai
 [Project screencast](https://youtu.be/IrqmbhqXVtE)
 
 ## Standout Suggestions
-*TODO (Optional):* This is where you can provide information about any standout suggestions that you have attempted.
+
+In this project we absolutely relied on autoML to feature engineering but maybe a better approach would have been to tackle this part ourselves. Suggestions for future improvements would be approach this part, usind EDA to maybe gain a better undersanding about the nature of the problem. Another possible approach to increase de performance is to include deep learning models. Deep learning methods are known to make implicit feature engineering, applying different non-linear transformation functions.
