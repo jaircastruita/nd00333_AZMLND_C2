@@ -19,7 +19,7 @@ Creating swagger documentation: Using the built-in swagger documentation tool he
 Creating a pipeline from a deployed model: ML pipelines stitches together different phases of ML. And it's mainly used to monitor performance in the real world, logging metrics and models outputs and also helps for detecting data drift and give the opportunity to reuse computed modules if changes weren't done.
 
 
-## Key Steps 
+## Key Steps
 <br>
 
 In this section it is listed the steps followed in order to finish this project. There is a screenshot attached to each required step (Some screenshots were taken in two different sessions so there might be some difference in instances naming).
@@ -34,7 +34,7 @@ Fist, load the dataset which will be used to predict using a ML model. For this 
 
 Once the dataset is uploaded, it will be necessary to [create a running automl instance](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-use-automated-ml-for-ml-models#create-and-run-experiment) to perform the model/hyperparameter search. In your azure ML portal, go to the 'Automated ML' section and select 'New automated ML run' to start a new automl instance. You'll be requested to populate a form for basic information, it is also needed to select a datastore that you want to use for this experiment. You need to select the target column that will be used to fit the automl instance, and check the type assigned (automatically) to each column. You also will need to give a compute instance that will be used to run the experiment, if you not have one you will need to [create is as well](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-attach-compute-studio#compute-instance). The 'task type' is needed also. This specifies what your automl is being optimized. For this dataset you need to select 'classification' task. Another necessary requirement is to give a 'primary metric' to optimize. In this project 'Accuracy' (the default) is enough. For this experiment it is needed to cap the max duration to 1hr (3hr is the default), for timing restrictions.
 
-Once all the necessary requirements are filled you can [run your experiment](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-use-automated-ml-for-ml-models#create-and-run-experiment). A new 'running' will appear on 'status', indicating that the experiment is running. Once the experiment is finished this label will be marked as 'completed'. 
+Once all the necessary requirements are filled you can [run your experiment](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-use-automated-ml-for-ml-models#create-and-run-experiment). A new 'running' will appear on 'status', indicating that the experiment is running. Once the experiment is finished this label will be marked as 'completed'.
 
 ![best model](images/proyecto2_2/s2_best_model.PNG)
 
@@ -84,7 +84,7 @@ Before executing the 'benchmark.sh' file it is necessary first to replace the **
 
 ![apache benchmark](images/proyecto2_2/s6_apache_benchmark.PNG)
 
-### Creating a pipeline automl 
+### Creating a pipeline automl
 
 [Pipelines](https://docs.microsoft.com/en-us/azure/machine-learning/concept-ml-pipelines) are useful parts for a successful CD/CI paradigm. They can be sticked together to form a more complex and parallel workflow in a team project. They can also help to re-train or re-run models whenever certain amount of time is given or some change to the scripts or databases is detected.
 
@@ -154,3 +154,12 @@ Entire pipelines can be deployed in matter of minutes wraping a lot of overhead 
 <br>
 
 In this project we absolutely relied on autoML to feature engineering but maybe a better approach would have been to tackle this part ourselves. Suggestions for future improvements would be approach this part, usind EDA to maybe gain a better undersanding about the nature of the problem. Another possible approach to increase de performance is to include deep learning models. Deep learning methods are known to make implicit feature engineering, applying different non-linear transformation functions.
+
+## References
+<br>
+
+- [Mastering markdown](https://guides.github.com/features/mastering-markdown/)
+- [API host and base path](https://swagger.io/docs/specification/api-host-and-base-path/)
+- [Concept of ML pipelines](https://docs.microsoft.com/en-us/azure/machine-learning/concept-ml-pipelines)
+- [How to create & attach compute cluster](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-attach-compute-cluster?tabs=azure-studio)
+- [How to consume a web service](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-consume-web-service?tabs=python)
